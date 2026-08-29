@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>NovaNotes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuBtn" class="icon-btn">☰</button>
+    <h1>NovaNotes</h1>
+    <div class="top-actions">
+      <button id="searchBtn" class="icon-btn">🔍</button>
+      <button id="darkBtn" class="icon-btn">🌙</button>
+    </div>
+  </header>
+
+  <div id="searchBar" class="searchbar hidden">
+    <input id="searchInput" type="search" placeholder="Search notes...">
+  </div>
+
+  <aside id="drawer" class="drawer">
+    <div class="drawer-title">NovaNotes</div>
+    <button class="drawer-item active" data-filter="all">📝 All notes</button>
+    <button class="drawer-item" data-filter="pinned">📌 Pinned</button>
+    <button class="drawer-item" data-filter="checklist">☑️ Checklists</button>
+    <button class="drawer-item" data-filter="trash">🗑️ Trash</button>
+  </aside>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <main>
+    <section id="notes" class="notes"></section>
+    <div id="empty" class="empty">
+      <div class="empty-icon">📝</div>
+      <h2>No notes yet</h2>
+      <p>Tap the + button to create your first note.</p>
+    </div>
+  </main>
+
+  <button id="addBtn" class="fab">＋</button>
+
+  <div id="editor" class="modal hidden">
+    <div class="editor-card">
+      <input id="titleInput" class="title-input" placeholder="Title">
+      <textarea id="bodyInput" class="body-input" placeholder="Take a note..."></textarea>
+
+      <div id="checklistArea" class="checklist-area hidden"></div>
+
+      <div class="editor-tools">
+        <button id="colorBtn">🎨</button>
+        <button id="checkBtn">☑️</button>
+        <button id="pinBtn">📌</button>
+        <button id="deleteBtn">🗑️</button>
+      </div>
+
+      <div id="colors" class="colors hidden">
+        <button data-color="default"></button>
+        <button data-color="yellow"></button>
+        <button data-color="green"></button>
+        <button data-color="blue"></button>
+        <button data-color="purple"></button>
+        <button data-color="pink"></button>
+      </div>
+
+      <button id="closeBtn" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
